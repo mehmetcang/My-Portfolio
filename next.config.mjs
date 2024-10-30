@@ -5,11 +5,26 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'your-image-domain.com', // Replace with actual domains if needed
+        hostname: 'mehmetcangultekin.com',
         port: '',
         pathname: '**',
       },
     ],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.mehmetcangultekin.com',
+          },
+        ],
+        destination: 'https://mehmetcangultekin.com/:path*',
+        permanent: true,
+      },
+    ];
   },
 };
 

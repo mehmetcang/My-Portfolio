@@ -9,7 +9,8 @@
   --text-color: #1F2937;
   --font-size-heading: 2.25rem; /* 36px */
   --font-size-subheading: 1.5rem; /* 24px */
-  --font-size-body: 1rem; /* 16px */
+  --font-size-body: 1.5rem; /* 16px */
+  --font-size-base: 1.5rem; /* 16px */
 }
 
 html, body {
