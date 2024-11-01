@@ -1,9 +1,6 @@
 'use client';
 
 import React from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import MotionSection from '../components/MotionSection';
 import Motion from '../components/Motion';
 import dynamic from 'next/dynamic';
 

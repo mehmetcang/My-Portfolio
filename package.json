@@ -10,8 +10,6 @@
     "build:css": "tailwindcss -i app/globals.css -o public/styles.css"
   },
   "dependencies": {
-    "tailwindcss": "^3.0.0",
-    "autoprefixer": "^10.0.0",
     "framer-motion": "^11.11.9",
     "next": "14.2.14",
     "nodemailer": "^6.9.15",
