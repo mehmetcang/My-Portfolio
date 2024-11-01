@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
             </Link>
           </div>
           <div className="flex space-x-4" role="menu">
-            {['/', '/projects', '/cv', '/contact'].map((path) => (
+            {['/projects', '/cv', '/contact'].map((path) => (
               <Link
                 key={path}
                 href={path}
@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
                 role="menuitem"
                 aria-current={pathname === path ? 'page' : undefined}
               >
-                {path === '/' ? 'Home' : path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
+                {path.slice(1).charAt(0).toUpperCase() + path.slice(2)}
               </Link>
             ))}
           </div>
