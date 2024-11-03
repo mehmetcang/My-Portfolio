@@ -18,10 +18,10 @@ const nextConfig = {
         has: [
           {
             type: 'host',
-            value: 'www.mehmetcangultekin.com',
+            value: 'mehmetcangultekin.com',
           },
         ],
-        destination: 'https://mehmetcangultekin.com/:path*',
+        destination: 'https://www.mehmetcangultekin.com/:path*',
         permanent: true,
       },
     ];
