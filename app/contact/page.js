@@ -4,21 +4,37 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
+const contactVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 }
+};
+
 export default function Contact() {
   return (
-    <div className="min-h-screen flex items-start justify-center p-8 pt-16">
+    <motion.div 
+      className="min-h-screen flex items-start justify-center p-8 pt-16"
+      initial="hidden"
+      animate="visible"
+      variants={contactVariants}
+    >
       <motion.div 
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.05 }}
-        transition={{ duration: 0.3 }}
         className="bg-white bg-opacity-30 backdrop-blur-md p-8 rounded-lg shadow-lg max-w-md w-full"
+        variants={contactVariants}
       >
-        <h1 className="font-semibold mb-6 text-center text-gray-800" style={{ fontSize: 'var(--font-size-heading)' }}>Contact Me</h1>
+        <h1 className="font-semibold mb-6 text-center text-gray-800" 
+            style={{ fontSize: 'var(--font-size-heading)' }}>
+          Contact Me
+        </h1>
         <div className="space-y-6">
           <motion.div 
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-4"
+            variants={itemVariants}
           >
             <FaEnvelope className="text-2xl text-gray-600" />
             <div>
@@ -31,6 +47,7 @@ export default function Contact() {
           <motion.div 
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-4"
+            variants={itemVariants}
           >
             <FaLinkedin className="text-2xl text-gray-600" />
             <div>
@@ -48,6 +65,7 @@ export default function Contact() {
           <motion.div 
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-4"
+            variants={itemVariants}
           >
             <FaGithub className="text-2xl text-gray-600" />
             <div>
@@ -64,6 +82,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import { motion } from 'framer-motion';
 import Motion from '../components/Motion';
 
 const container = {
@@ -8,7 +8,7 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.3
     }
   }
 };
@@ -30,6 +30,7 @@ export default function Home() {
         I am a computer engineer graduated from Beykent University. I am continuing a double major program in Electrical and Electronics Engineering and will graduate from my second major in 2025.
         The areas of interest related to my fields of study are Embedded system design, Robotics and Automation, Hardware Integration with Artificial Intelligence and Machine Learning.
       </Motion.p>
+      
     </Motion.div>
   );
 }
