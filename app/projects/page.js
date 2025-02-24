@@ -11,7 +11,7 @@ const projects = [
     image: '/EduBud.jpeg',
     technologies: ['React', 'Node.js', 'MongoDB']
   },
-  // Add more projects here
+
 ];
 
 export default function Projects() {
